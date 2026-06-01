@@ -1,0 +1,38 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+  animation: fadeIn 180ms ease both;
+}
+
+.panel {
+  max-width: 920px;
+  width: calc(100% - 3rem);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 30px 80px rgba(2,6,23,0.4);
+  transform-origin: center center;
+  animation: popIn 220ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.largeFormula { text-align: center; margin: 1rem 0; }
+
+.modalContent h3 { margin: 0 0 0.5rem 0; }
+.modalMeta { margin-top: 0.75rem; color: var(--muted); }
+
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes popIn { from { transform: translateY(8px) scale(0.98); opacity: 0 } to { transform: translateY(0) scale(1); opacity: 1 } }

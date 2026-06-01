@@ -1,0 +1,113 @@
+.section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.title {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table thead {
+  background: linear-gradient(135deg, rgba(109,93,252,0.06), rgba(99,102,241,0.04));
+}
+
+.table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+}
+
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.table tbody tr:hover {
+  background: rgba(109,93,252,0.03);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.symbolCol {
+  width: 25%;
+}
+
+.nameCol {
+  width: 50%;
+}
+
+.unitCol {
+  width: 25%;
+}
+
+.symbol {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.symbol code {
+  background: rgba(109,93,252,0.08);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-family: var(--mono);
+}
+
+.name {
+  font-weight: 500;
+}
+
+.unit {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .symbolCol {
+    width: 30%;
+  }
+
+  .nameCol {
+    width: 45%;
+  }
+
+  .unitCol {
+    width: 25%;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+}

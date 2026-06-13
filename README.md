@@ -28,6 +28,16 @@ Each formula is displayed using proper mathematical rendering and organized in a
 
 ---
 
+## Screenshots
+
+![image alt](https://github.com/hari29092007/FormulaForge/blob/530495135ce20c64259291f00a557d52e3f3a3d4/src/screenshots/Screenshot%202026-06-13%20154744.png)
+
+![image alt](https://github.com/hari29092007/FormulaForge/blob/530495135ce20c64259291f00a557d52e3f3a3d4/src/screenshots/Screenshot%202026-06-13%20154848.png)
+
+![image alt](https://github.com/hari29092007/FormulaForge/blob/530495135ce20c64259291f00a557d52e3f3a3d4/src/screenshots/Screenshot%202026-06-13%20154901.png)
+
+---
+
 ## ✨ Features
 
 - 75 Essential Formulas

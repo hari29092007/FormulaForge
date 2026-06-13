@@ -140,7 +140,9 @@ function FormulaCard({ formula, isFavorite, onToggleFavorite }) {
         <Modal onClose={() => setOpen(false)}>
           <div className={styles.modalContent}>
             <h3 className={styles.name}>{formula.name}</h3>
-            <div className={styles.largeFormula} dangerouslySetInnerHTML={{ __html: largeHtml }} />
+            <div className={styles.largeFormulaViewport}>
+              <div className={styles.largeFormula} dangerouslySetInnerHTML={{ __html: largeHtml }} />
+            </div>
             <p className={styles.description}>{formula.description}</p>
             <div className={styles.modalMeta}>
               <strong>Units:</strong> {formula.units}

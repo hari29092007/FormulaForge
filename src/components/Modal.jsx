@@ -55,19 +55,24 @@ function Modal({ children, onClose }) {
         onMouseDown={(e) => e.stopPropagation()}
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className={styles.close}
-          onMouseDown={(e) => e.stopPropagation()}
-          onClick={(e) => {
-            e.stopPropagation();
-            console.debug('Modal close button clicked');
-            onClose();
-          }}
-          aria-label="Close"
-        >
-          ✕
-        </button>
-        {children}
+        <div className={styles.header}>
+          <button
+            type="button"
+            className={styles.close}
+            onMouseDown={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className={styles.body}>
+          {children}
+        </div>
       </div>
     </div>,
     document.body,

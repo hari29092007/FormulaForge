@@ -4,29 +4,40 @@
   background: rgba(2,6,23,0.6);
   display: grid;
   place-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
   z-index: 1200;
   animation: fadeIn 180ms ease both;
 }
 
 .panel {
   max-width: 920px;
-  width: calc(100% - 3rem);
+  width: min(920px, 100%);
+  max-height: 100%;
   background: var(--surface);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 30px 80px rgba(2,6,23,0.4);
   transform-origin: center center;
   animation: popIn 220ms cubic-bezier(.2,.9,.2,1) both;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .close {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  position: sticky;
+  top: 0;
+  align-self: flex-end;
+  margin-left: auto;
   border: none;
   background: transparent;
   font-size: 1.1rem;
   cursor: pointer;
+  z-index: 1;
 }
 
 .largeFormula { text-align: center; margin: 1rem 0; }

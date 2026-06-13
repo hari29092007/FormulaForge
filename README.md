@@ -94,8 +94,7 @@ The goal of FormulaForge is to make formula revision faster and more accessible 
 
 Planned features for future versions include:
 
-- Formula Calculators
-- Favorites System
+- GPA calculator
 - Additional Engineering Subjects
 - Advanced Filtering & Sorting
 

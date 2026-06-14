@@ -106,7 +106,7 @@ Planned features for future versions include:
 
 - GPA calculator
 - Additional Engineering Subjects
-- Advanced Filtering & Sorting
+- Additional formulae
 
 ---
 

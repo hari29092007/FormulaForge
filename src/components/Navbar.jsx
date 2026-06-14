@@ -8,9 +8,21 @@ function Navbar({ darkMode, onToggleTheme }) {
         <p className={styles.title}>FormulaForge</p>
       </div>
 
-      <button className={styles.themeButton} type="button" onClick={onToggleTheme}>
-        {darkMode ? 'Light mode' : 'Dark mode'}
-      </button>
+      <div className={styles.actions}>
+        <button
+          className={styles.quizButton}
+          type="button"
+          onClick={() => {
+            window.location.href = 'quiz.html';
+          }}
+        >
+          Start Quiz
+        </button>
+
+        <button className={styles.themeButton} type="button" onClick={onToggleTheme}>
+          {darkMode ? 'Light mode' : 'Dark mode'}
+        </button>
+      </div>
     </header>
   );
 }

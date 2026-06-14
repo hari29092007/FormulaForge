@@ -10,20 +10,20 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [subject, setSubject] = useState('All Subjects');
   const [favorites, setFavorites] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = window.sessionStorage.getItem('formulaTheme');
+    return savedTheme ? savedTheme === 'dark' : true;
+  });
 
   useEffect(() => {
     const savedFavorites = window.localStorage.getItem('formulaFavorites');
-    const savedTheme = window.localStorage.getItem('formulaTheme');
+    const savedTheme = window.sessionStorage.getItem('formulaTheme');
 
     if (savedFavorites) {
       setFavorites(JSON.parse(savedFavorites));
     }
 
-    if (savedTheme) {
-      setDarkMode(savedTheme === 'dark');
-      document.documentElement.dataset.theme = savedTheme;
-    }
+    document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
   }, []);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     const mode = darkMode ? 'dark' : 'light';
     document.documentElement.dataset.theme = mode;
-    window.localStorage.setItem('formulaTheme', mode);
+    window.sessionStorage.setItem('formulaTheme', mode);
   }, [darkMode]);
 
   const filteredFormulas = useMemo(() => {
